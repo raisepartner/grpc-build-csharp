@@ -1,0 +1,2 @@
+#!/bin/sh
+docker build --build-args GRPC_BUILD_VERSION=0.1 raisepartner/grpc-build-csharp:0.1 .
