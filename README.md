@@ -11,3 +11,20 @@ docker build -t raisepartner/grpc-build-csharp:dev --build-arg GRPC_BUILD_VERSIO
 ```
 
 If no `GRPC_BUILD_VERSION` is specified, *latest* is used.
+
+
+### using a private nuget sources
+
+example:
+
+```bash
+nuget sources add \
+  -name nuget-private \
+  -source https://nexus.raisepartner.com/repository/nuget-private/ \
+  -username <USER> \
+  -password <PASSWORD> \
+  -storepasswordincleartext \
+  -ConfigFile ~/.nuget/NuGet/NuGet.Config
+```
+
+This snippet can be added to the build/CI script.
